@@ -1,0 +1,33 @@
+
+
+const CampaignIntroSection: React.FC = () => {
+  return (
+    <section id="intro" className="py-20 md:py-28 bg-gray-50">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-10 text-center">
+          캠페인 소개
+        </h2>
+        <p className="text-xl text-gray-700 mb-16 text-center leading-relaxed">
+          KMUCS Reimagine 2035는 학생들의 상상과 목소리를 통해<br />
+          미래 대학의 모습을 함께 그려보는 캠페인입니다.
+        </p>
+        <div className="flex justify-center space-x-12">
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-600 mb-3">Past</div>
+            <div className="text-gray-600 font-medium">역사와 전통</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-600 mb-3">Now</div>
+            <div className="text-gray-600 font-medium">현재의 성장</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-bold text-blue-600 mb-3">2035</div>
+            <div className="text-gray-600 font-medium">미래의 비전</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default CampaignIntroSection;

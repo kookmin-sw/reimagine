@@ -1,23 +1,51 @@
-# React + TypeScript + Vite
+# KMUCS Reimagine 2035 캠페인 웹사이트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KMUCS Reimagine 2035 캠페인을 위한 React + TailwindCSS 기반 웹사이트입니다.
 
-Currently, two official plugins are available:
+## 프로젝트 구조
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **랜딩페이지 (/)**: 캠페인 소개, 미래 비전, 참여자 이야기 등
+- **연혁 페이지 (/history)**: KMUCS의 성장 타임라인
+- **워크샵 목록 (/workshop)**: 진행된 워크샵 리스트
+- **워크샵 상세 (/workshop/:id)**: 개별 워크샵 내용 및 인터뷰
 
-## React Compiler
+## 기술 스택
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- TypeScript
+- TailwindCSS 4
+- React Router DOM
+- Vite
 
-## Expanding the ESLint configuration
+## 개발 환경 설정
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 의존성 설치
+```bash
+npm install
+```
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
+### 개발 서버 실행
+```bash
+npm run dev
+```
+
+### 빌드
+```bash
+npm run build
+```
+
+### 린트
+```bash
+npm run lint
+```
+
+## 프로젝트 특징
+
+- 모바일 퍼스트 디자인
+- 반응형 레이아웃
+- 간결하고 몰입형 UX
+- 텍스트 중심 디자인
+- 미래 지향적 컨셉
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
