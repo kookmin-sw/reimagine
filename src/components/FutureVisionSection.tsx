@@ -9,16 +9,16 @@ const FutureVisionSection: React.FC = () => {
         </h2>
         <div className="space-y-12 text-center">
           <div className="text-3xl md:text-4xl font-light leading-relaxed text-white">
-            AI와 인간이 함께 배우는 대학
+            AI와 윤리, 기술과 인간이 조화를 이루는 대학
           </div>
           <div className="text-3xl md:text-4xl font-light leading-relaxed text-white">
-            창의성과 기술이 연결되는 교육
+            창의성과 협업, 글로벌 역량을 갖춘 융합 인재 양성
           </div>
           <div className="text-3xl md:text-4xl font-light leading-relaxed text-white">
-            경계를 넘어 협업하는 KMUCS
+            실무 중심의 혁신 교육으로 신뢰받는 소프트웨어 대학
           </div>
           <div className="text-3xl md:text-4xl font-light leading-relaxed text-white">
-            세계와 함께 성장하는 미래
+            데이터와 AI로 인간의 삶을 개선하는 글로벌 AI 전문가
           </div>
         </div>
       </div>

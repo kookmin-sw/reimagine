@@ -8,8 +8,8 @@ const CampaignIntroSection: React.FC = () => {
           캠페인 소개
         </h2>
         <p className="text-xl text-gray-700 mb-16 text-center leading-relaxed">
-          KMUCS Reimagine 2035는 학생들의 상상과 목소리를 통해<br />
-          미래 대학의 모습을 함께 그려보는 캠페인입니다.
+          KMUCS Reimagine 2035는 학생·교수·산업계·타과생 등 다양한 구성원의 의견을 반영하여<br />
+          미래 비전을 함께 상상하고 만들어가는 캠페인입니다.
         </p>
         <div className="flex justify-center space-x-12">
           <div className="text-center">

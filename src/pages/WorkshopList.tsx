@@ -5,21 +5,15 @@ const WorkshopList: React.FC = () => {
   const workshops = [
     {
       id: 1,
-      title: '미래 교육 워크샵',
-      date: '2024년 3월 15일',
-      description: '학생들과 함께 2035년 교육의 모습을 상상하는 워크샵'
+      title: 'Reimagine 2035 워크숍',
+      date: '2025년 6월 18일',
+      description: '학생들의 다양한 상상들을 인터뷰를 통해 담아내는 워크숍'
     },
     {
       id: 2,
-      title: '기술과 인간 워크샵',
-      date: '2024년 3월 22일',
-      description: 'AI와 인간의 협업에 대한 토론과 아이디어 공유'
-    },
-    {
-      id: 3,
-      title: '글로벌 협업 워크샵',
-      date: '2024년 3월 29일',
-      description: '국제적인 협업과 글로벌 KMUCS의 미래 비전'
+      title: '번개 워크숍',
+      date: '2025년 10월 3일',
+      description: 'KMUCS Reimagine 2035 프로젝트의 일환으로 진행된 인터뷰 워크숍'
     }
   ];
 
@@ -32,7 +26,7 @@ const WorkshopList: React.FC = () => {
             Reimagine 2035 Workshop
           </h1>
           <p className="text-xl text-gray-700 mb-16 text-center max-w-2xl mx-auto leading-relaxed">
-            학생들의 상상을 인터뷰로 담아낸 캠페인 프로그램입니다.
+            재학생들이 모여 "KMUCS Reimagine 2035!"라는 주제로 워크숍을 진행했습니다.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

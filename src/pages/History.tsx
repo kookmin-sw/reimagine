@@ -2,10 +2,11 @@ import Header from '../components/Header';
 
 const History: React.FC = () => {
   const timeline = [
-    { year: '20XX', event: '설립', description: 'KMUCS의 시작' },
-    { year: '20XX', event: '학과 개편', description: '교육 프로그램 확장' },
-    { year: '20XX', event: '프로젝트 도입', description: '실무 중심 교육 강화' },
-    { year: '20XX', event: '현재', description: '지속적인 혁신과 성장' }
+    { year: '1994', event: 'KMUCS 설립', description: '국민대학교 소프트웨어융합대학의 시작' },
+    { year: '2014', event: '무한상상실 개설', description: '학생들의 창의적 상상을 위한 공간 마련' },
+    { year: '2016', event: '소프트웨어중심대학 선정', description: '글로벌 멘토링, 산학협력 체계 구축' },
+    { year: '2022', event: '인공지능학부 설립', description: '4차 산업혁명을 주도할 글로벌 AI 인재 양성 시작' },
+    { year: '2025', event: 'Reimagine 2035 캠페인', description: '미래 비전을 함께 상상하는 캠페인 진행' }
   ];
 
   return (
@@ -17,7 +18,7 @@ const History: React.FC = () => {
             KMUCS의 성장
           </h1>
           <p className="text-xl text-gray-700 mb-16 text-center max-w-2xl mx-auto leading-relaxed">
-            KMUCS가 걸어온 시간과 변화를 소개합니다.
+            국민대학교 소프트웨어융합대학은 1994년 설립 이후, 혁신적인 교육과 연구로 발전해 왔습니다.
           </p>
 
           <div className="relative">
@@ -41,7 +42,7 @@ const History: React.FC = () => {
 
           <div className="mt-16 text-center">
             <p className="text-lg text-gray-700">
-              이러한 흐름 위에서 KMUCS는 미래를 준비하고 있습니다.
+              이러한 발전 위에서 KMUCS는 미래를 준비하고 있습니다.
             </p>
           </div>
         </div>

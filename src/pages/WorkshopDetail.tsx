@@ -7,21 +7,23 @@ const WorkshopDetail: React.FC = () => {
   // Mock data - 실제로는 API나 데이터에서 가져올 것
   const workshop = {
     id: parseInt(id || '1'),
-    title: '미래 교육 워크샵',
-    date: '2024년 3월 15일',
-    location: 'KMUCS 강의실',
-    participants: 25,
-    description: '학생들과 함께 2035년 교육의 모습을 상상하는 워크샵입니다.',
+    title: id === '1' ? 'Reimagine 2035 워크숍' : '번개 워크숍',
+    date: id === '1' ? '2025년 6월 18일' : '2025년 10월 3일',
+    location: '국민대학교',
+    participants: id === '1' ? 15 : 20,
+    description: id === '1' 
+      ? '학생들의 다양한 상상들을 인터뷰를 통해 담아내는 워크숍입니다.'
+      : 'KMUCS Reimagine 2035 프로젝트의 일환으로, 학생들의 다양한 상상들을 인터뷰를 통해 담아내고자 한 활동입니다.',
     activities: [
       '인터뷰 방식으로 진행',
       '미래 교육에 대한 질문 구성',
       '학생들의 아이디어 수집'
     ],
     interviews: [
-      { question: 'Q1. 자기소개', answer: '컴퓨터공학과 3학년 학생입니다.' },
-      { question: 'Q2. 2035 상상', answer: 'AI 튜터와 함께하는 개인화된 교육이 보편화될 것입니다.' },
-      { question: 'Q3. KMUCS 역할', answer: '혁신적인 교육 방법을 선도하는 역할을 할 수 있습니다.' },
-      { question: 'Q4. 필요한 변화', answer: '더 많은 실무 중심 프로젝트와 국제 협력이 필요합니다.' }
+      { question: 'Q1. 자기소개', answer: id === '1' ? '소프트웨어학부 학생입니다.' : '컴퓨터공학과 학생입니다.' },
+      { question: 'Q2. 2035 상상', answer: id === '1' ? 'AI 튜터와 함께하는 개인화된 교육이 보편화될 것입니다.' : '사회는 AI와 인간이 조화를 이루는 방향으로 발전할 것입니다.' },
+      { question: 'Q3. KMUCS 역할', answer: id === '1' ? '혁신적인 교육 방법을 선도하는 역할을 할 수 있습니다.' : 'AI와 윤리, 창의성과 협업을 겸비한 인재를 양성해야 합니다.' },
+      { question: 'Q4. 필요한 변화', answer: id === '1' ? '더 많은 실무 중심 프로젝트와 국제 협력이 필요합니다.' : '글로벌 역량과 융합 교육을 강화해야 합니다.' }
     ]
   };
 
