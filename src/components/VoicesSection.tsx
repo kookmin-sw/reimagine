@@ -1,34 +1,38 @@
 import { Link } from 'react-router-dom';
 
 const VoicesSection: React.FC = () => {
-  const voices = [
+  const workshopHighlights = [
     {
-      quote: "기술만 잘하는 대학이 아니라, AI와 윤리, 창의성과 협업을 겸비한 인재를 양성하는 대학이 되었으면 좋겠어요.",
-      author: "소프트웨어학부 학생"
+      title: '학생 인터뷰 중심',
+      description: '참여자들이 상상한 2035년의 대학과 사회, 그리고 자신의 미래를 인터뷰 형식으로 풀어냅니다.'
     },
     {
-      quote: "2035년의 KMUCS는 글로벌 역량과 융합 교육을 강화하여 세계적 수준의 소프트웨어 인재를 배출하는 대학이길 바랍니다.",
-      author: "인공지능학부 학생"
+      title: '팀별 아이디어 확장',
+      description: '대화를 통해 나온 키워드를 바탕으로 미래 비전과 교육 방향을 함께 구체화합니다.'
     },
     {
-      quote: "미래를 배우는 곳이 아니라, 미래를 만들어가는 곳으로 발전하여 사회 문제를 해결하는 혁신적인 교육을 제공했으면 합니다.",
-      author: "KMUCS 재학생"
+      title: '결과 아카이빙',
+      description: '워크샵에서 나온 이야기와 기록을 모아 KMUCS Reimagine 2035의 흐름으로 남깁니다.'
     }
   ];
 
   return (
-    <section id="voices" className="py-20 md:py-28 bg-gray-50">
+    <section className="py-20 md:py-28 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-16 text-center">
-          참여자 이야기
+          워크샵 소개
         </h2>
+        <p className="mx-auto mb-14 max-w-3xl text-center text-lg leading-relaxed text-gray-600 md:text-xl">
+          Reimagine 2035 워크샵은 학생들의 생각과 상상을 인터뷰와 대화로 모아,
+          앞으로의 KMUCS가 어떤 방향으로 나아가야 할지 함께 그려보는 프로그램입니다.
+        </p>
         <div className="grid md:grid-cols-3 gap-12">
-          {voices.map((voice, index) => (
+          {workshopHighlights.map((item, index) => (
             <div key={index} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-              <blockquote className="text-gray-700 mb-6 text-lg leading-relaxed">
-                "{voice.quote}"
-              </blockquote>
-              <cite className="text-blue-600 font-medium text-base">— {voice.author}</cite>
+              <h3 className="mb-4 text-xl font-semibold text-blue-900">{item.title}</h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                {item.description}
+              </p>
             </div>
           ))}
         </div>

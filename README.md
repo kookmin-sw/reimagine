@@ -1,13 +1,13 @@
-# KMUCS Reimagine 2035 캠페인 웹사이트
+# KMUCS Reimagine 2035! 프로젝트 웹사이트
 
-KMUCS Reimagine 2035 캠페인을 위한 React + TailwindCSS 기반 웹사이트입니다.
+KMUCS Reimagine 2035! 프로젝트를 위한 React + TailwindCSS 기반 웹사이트입니다.
 
 ## 프로젝트 구조
 
-- **랜딩페이지 (/)**: 캠페인 소개, 미래 비전, 참여자 이야기 등
+- **랜딩페이지 (/)**: 프로젝트 소개, 미래 비전, 참여자 이야기 등
 - **연혁 페이지 (/history)**: KMUCS의 성장 타임라인
 - **워크샵 목록 (/workshop)**: 진행된 워크샵 리스트
-- **워크샵 상세 (/workshop/:id)**: 개별 워크샵 내용 및 인터뷰
+- **워크샵 상세**: 각 워크샵마다 독립 페이지로 구성
 
 ## 기술 스택
 

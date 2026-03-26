@@ -2,14 +2,14 @@
 
 const CampaignIntroSection: React.FC = () => {
   return (
-    <section id="intro" className="py-20 md:py-28 bg-gray-50">
+    <section className="bg-gray-50 py-20 md:py-28">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-10 text-center">
-          캠페인 소개
+          프로젝트 소개
         </h2>
         <p className="text-xl text-gray-700 mb-16 text-center leading-relaxed">
-          KMUCS Reimagine 2035는 학생·교수·산업계·타과생 등 다양한 구성원의 의견을 반영하여<br />
-          미래 비전을 함께 상상하고 만들어가는 캠페인입니다.
+          KMUCS Reimagine 2035! 는<br/>학생·교수·졸업생·타과생 등, 다양한 구성원의 의견을 반영하여<br />
+          미래 비전을 함께 상상하고 만들어가는 프로젝트입니다.
         </p>
         <div className="flex justify-center space-x-12">
           <div className="text-center">

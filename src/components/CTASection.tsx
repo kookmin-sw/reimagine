@@ -1,4 +1,6 @@
 
+const SURVEY_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLSf11MVsB7jnMCjfwTzN11DU7Xc0BqGdu8Tc_yHCqP1fINvKuA/viewform';
 
 const CTASection: React.FC = () => {
   return (
@@ -8,9 +10,14 @@ const CTASection: React.FC = () => {
           당신이 상상하는 2035년의 KMUCS는<br />
           어떤 모습인가요?
         </h2>
-        <button className="bg-white text-blue-600 px-12 py-5 rounded-lg hover:bg-gray-100 transition-all duration-200 text-xl font-medium shadow-lg">
-          캠페인 참여하기
-        </button>
+        <a
+          href={SURVEY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white text-blue-600 px-12 py-5 rounded-lg hover:bg-gray-100 transition-all duration-200 text-xl font-medium shadow-lg inline-block cursor-pointer"
+        >
+          설문조사 참여하기
+        </a>
       </div>
     </section>
   );

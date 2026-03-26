@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 const TimeFlowSection: React.FC = () => {
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-white text-center">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-12 text-center">
+        <div className="grid md:grid-cols-3 gap-12 justify-items-center">
           <div>
             <div className="text-4xl font-bold text-blue-600 mb-6">Past</div>
             <div className="text-xl text-gray-700 mb-2">KMUCS의 시작</div>
@@ -12,13 +12,13 @@ const TimeFlowSection: React.FC = () => {
           </div>
           <div>
             <div className="text-4xl font-bold text-blue-600 mb-6">Now</div>
-            <div className="text-xl text-gray-700 mb-2">지금의 성장과 변화</div>
-            <div className="text-gray-600">현재의 혁신과 도전</div>
+            <div className="text-xl text-gray-700 mb-2">현재의 성장과 변화</div>
+            <div className="text-gray-600">혁신과 도전</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-blue-600 mb-6">2035</div>
             <div className="text-xl text-gray-700 mb-2">우리가 함께 그려갈 미래</div>
-            <div className="text-gray-600">미래의 비전 실현</div>
+            <div className="text-gray-600">비전 실현</div>
           </div>
         </div>
         <div className="text-center mt-16">
