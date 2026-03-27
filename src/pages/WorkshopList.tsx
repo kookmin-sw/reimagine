@@ -23,17 +23,10 @@ const WorkshopList: React.FC = () => {
       <Header />
       <div className="pt-24 pb-20 md:pb-28 bg-white min-h-screen">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12 rounded-2xl overflow-hidden shadow-lg bg-linear-to-r from-blue-500 via-indigo-500 to-purple-500">
-            <div className="grid grid-cols-3 gap-2 p-4">
-              <div className="h-40 bg-[url('https://via.placeholder.com/400x300?text=Mockup+1')] bg-cover bg-center rounded-xl shadow-inner" />
-              <div className="h-40 bg-[url('https://via.placeholder.com/400x300?text=Mockup+2')] bg-cover bg-center rounded-xl shadow-inner" />
-              <div className="h-40 bg-[url('https://via.placeholder.com/400x300?text=Mockup+3')] bg-cover bg-center rounded-xl shadow-inner" />
-            </div>
-            <div className="px-6 py-4 text-white text-center">
-              <h2 className="text-2xl font-bold">Reimagine 2035 ! Workshop</h2>
-              <p className="text-sm opacity-90">모킹업 이미지로 프로젝트 느낌을 미리 보여줍니다.</p>
-            </div>
-          </div>
+          <section className="mb-12 overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#0f172a_0%,#1d4ed8_58%,#60a5fa_100%)] px-6 py-12 text-white shadow-xl sm:px-10">
+            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-100/90">Workshop</p>
+            <h1 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">Reimagine 2035 ! Workshop</h1>
+          </section>
 
           <div className="grid gap-8 md:grid-cols-2">
             {workshops.map((workshop) => (
