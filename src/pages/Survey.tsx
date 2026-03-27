@@ -1,9 +1,13 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import CurrentRegionSection from '../components/CurrentRegionSection';
+import FutureRegionSection from '../components/FutureRegionSection';
 
 const SURVEY_URL =
   'https://docs.google.com/forms/d/e/1FAIpQLSf11MVsB7jnMCjfwTzN11DU7Xc0BqGdu8Tc_yHCqP1fINvKuA/viewform';
 const EMBEDDED_SURVEY_URL = `${SURVEY_URL}?embedded=true`;
+const CANVA_RESULTS_URL =
+  'https://www.canva.com/design/DAG3vBRJUDU/P-7yNWHYq5HpJOWYbkxj1Q/view?embed';
 
 const Survey: React.FC = () => {
   return (
@@ -16,9 +20,6 @@ const Survey: React.FC = () => {
             <h1 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
               Reimagine 2035 설문 조사
             </h1>
-            <p className="mt-4 max-w-2xl text-base leading-7 text-blue-50 sm:text-lg">
-              프로젝트에 대한 의견과 앞으로의 상상을 모으는 공간입니다. 설문 참여와 결과 공유를 이 메뉴에서 함께 확인할 수 있도록 구성했습니다.
-            </p>
           </section>
 
           <section className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start">
@@ -120,7 +121,26 @@ const Survey: React.FC = () => {
                   교육의 혁신, 산업 연계, 윤리적 가치 확립을 통한 신뢰받는 소프트웨어 인재 양성이 핵심 방향으로 제시되었습니다.
                 </p>
               </div>
+
+              <div className="mt-10 overflow-hidden rounded-3xl border border-slate-200 bg-white">
+                <iframe
+                  title="KMUCS Reimagine 2035 설문조사 결과 Canva"
+                  src={CANVA_RESULTS_URL}
+                  className="h-[420px] w-full bg-white sm:h-[520px] lg:h-[720px]"
+                  loading="lazy"
+                  allowFullScreen
+                >
+                  로드 중…
+                </iframe>
+              </div>
             </article>
+
+            <div className="lg:col-span-2">
+              <div className="space-y-6">
+                <CurrentRegionSection />
+                <FutureRegionSection />
+              </div>
+            </div>
           </section>
         </div>
       </main>

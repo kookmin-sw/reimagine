@@ -34,6 +34,30 @@ const FutureVisionSection: React.FC = () => {
             />
           </div>
         </div>
+        <br/>
+        <div className="mx-auto mt-6 grid max-w-4xl gap-4 md:grid-cols-3">
+          {[
+            { id: '5xVHfpi85vA', title: '미니 영상 1' },
+            { id: 'pIwVkaHdiLs', title: '미니 영상 2' },
+            { id: 'BWQHCxTn2mg', title: '미니 영상 3' }
+          ].map((video) => (
+            <div
+              key={video.id}
+              className="overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40 shadow-[0_16px_40px_rgba(15,23,42,0.35)]"
+            >
+              <div className="aspect-video">
+                <iframe
+                  className="h-full w-full"
+                  src={`https://www.youtube.com/embed/${video.id}`}
+                  title={video.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
