@@ -8,17 +8,17 @@ const FutureVisionSection: React.FC = () => {
           Reimagine 2035
         </h2>
         <div className="space-y-12 text-center">
-          <div className="text-xl md:text-2xl font-light leading-relaxed text-white">
-            AI와 윤리, 기술과 인간이 조화를 이루는 대학
+          <div className="text-lg md:text-2xl font-light leading-relaxed text-white">
+            AI와 윤리, <br className="block sm:hidden" />기술과 인간이 조화를 이루는 대학
           </div>
-          <div className="text-xl md:text-2xl font-light leading-relaxed text-white">
-            창의성과 협업, 글로벌 역량을 갖춘 융합 인재 양성
+          <div className="text-lg md:text-2xl font-light leading-relaxed text-white">
+            창의성과 협업, <br className="block sm:hidden" />글로벌 역량을 갖춘 융합 인재 양성
           </div>
-          <div className="text-xl md:text-2xl font-light leading-relaxed text-white">
-            실무 중심의 혁신 교육으로 신뢰받는 소프트웨어 대학
+          <div className="text-lg md:text-2xl font-light leading-relaxed text-white">
+            실무 중심의 <br className="block sm:hidden" />혁신 교육으로 신뢰받는 소프트웨어 대학
           </div>
-          <div className="text-xl md:text-2xl font-light leading-relaxed text-white">
-            데이터와 AI로 인간의 삶을 개선하는 글로벌 AI 전문가
+          <div className="text-lg md:text-2xl font-light leading-relaxed text-white">
+            데이터와 AI로 <br className="block sm:hidden" />인간의 삶을 개선하는 글로벌 AI 전문가
           </div>
         </div>
         <br/>

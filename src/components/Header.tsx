@@ -36,6 +36,14 @@ const Header: React.FC = () => {
       return;
     }
 
+    if (window.innerWidth < 1280 && isMenuOpen) {
+      setIsMenuOpen(false);
+      window.setTimeout(() => {
+        scrollToSectionWithOffset(sectionId);
+      }, 180);
+      return;
+    }
+
     scrollToSectionWithOffset(sectionId);
     setIsMenuOpen(false);
   };

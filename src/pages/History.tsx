@@ -20,22 +20,22 @@ const History: React.FC = () => {
   return (
     <div>
       <Header />
-      <div className="pt-24 pb-20 md:pb-28 bg-gray-50 min-h-screen">
+      <div className="pt-28 pb-20 sm:pt-24 md:pb-28 bg-gray-50 min-h-screen">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative mb-12 overflow-hidden rounded-3xl">
-            <div className="grid grid-cols-3 gap-2 p-4">
+            <div className="grid grid-cols-3 gap-2 p-4 pb-40 sm:pb-4">
               <div className="h-36 rounded-2xl bg-[url('https://via.placeholder.com/400x300?text=History+1')] bg-cover bg-center shadow-inner sm:h-44" />
               <div className="h-36 rounded-2xl bg-[url('https://via.placeholder.com/400x300?text=History+2')] bg-cover bg-center shadow-inner sm:h-44" />
               <div className="h-36 rounded-2xl bg-[url('https://via.placeholder.com/400x300?text=History+3')] bg-cover bg-center shadow-inner sm:h-44" />
             </div>
 
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_28%,rgba(249,250,251,0.16)_56%,rgba(249,250,251,0.76)_82%,#f9fafb_100%)]" />
+            <div className="pointer-events-none absolute inset-0 hidden bg-[radial-gradient(circle_at_center,transparent_28%,rgba(249,250,251,0.16)_56%,rgba(249,250,251,0.76)_82%,#f9fafb_100%)] sm:block" />
             <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-[linear-gradient(180deg,#f9fafb_0%,rgba(249,250,251,0)_100%)]" />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-[linear-gradient(180deg,rgba(249,250,251,0)_0%,#f9fafb_92%)]" />
 
-            <div className="absolute inset-x-0 bottom-0 px-6 py-6 text-center">
-              <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-700/65">History of KMUCS</p>
-              <h2 className="mt-3 text-2xl font-bold text-slate-900 sm:text-3xl">시간 위에 쌓인 KMUCS의 성장</h2>
+            <div className="absolute inset-x-0 bottom-0 px-5 py-5 text-center sm:px-6 sm:py-6">
+              <p className="text-sm font-semibold uppercase leading-[1.8] tracking-[0.28em] text-blue-700/65">History of KMUCS</p>
+              <h2 className="mt-3 text-2xl font-bold leading-tight text-slate-900 sm:text-3xl">시간 위에 쌓인 KMUCS의 성장</h2>
               <br/>
               <p className="mt-2 text-sm text-slate-600 sm:text-base">
                 국민대학교 소프트웨어융합대학은<br/>1994년 전산과학과를 시작으로, 소프트웨어와 AI 교육의 흐름 속에서 꾸준히 확장과 변화를 이어왔습니다.
@@ -45,17 +45,17 @@ const History: React.FC = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200"></div>
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-blue-200 sm:left-8"></div>
 
-            <div className="space-y-12">
+            <div className="space-y-8 sm:space-y-12">
               {timeline.map((item, index) => (
                 <div key={index} className="relative flex items-start">
-                  <div className="shrink-0 w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                  <div className="shrink-0 w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg sm:w-16 sm:h-16 sm:text-lg">
                     <span className="flex flex-col items-center justify-center text-center leading-none translate-y-0.5">
                       {item.year.includes('.') ? (
                         <>
                           <span>{item.year.split('.')[0]}</span>
-                          <span className="text-xs font-medium">
+                          <span className="text-[10px] font-medium sm:text-xs">
                             {parseInt(item.year.split('.')[1], 10)}월
                           </span>
                         </>
@@ -64,16 +64,16 @@ const History: React.FC = () => {
                       )}
                     </span>
                   </div>
-                  <div className="ml-8 flex-1 rounded-lg border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:border-blue-100 hover:shadow-md">
+                  <div className="ml-4 flex-1 rounded-lg border border-gray-100 bg-white shadow-sm transition-all duration-200 hover:border-blue-100 hover:shadow-md sm:ml-8">
                     <button
                       type="button"
                       onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                      className="flex w-full items-center justify-between px-6 py-5 text-left"
+                      className="flex w-full items-center justify-between px-4 py-4 text-left sm:px-6 sm:py-5"
                       aria-expanded={openIndex === index}
                     >
-                      <h3 className="pr-6 text-xl font-semibold text-gray-900">{item.event}</h3>
+                      <h3 className="pr-4 text-base font-semibold text-gray-900 sm:pr-6 sm:text-xl">{item.event}</h3>
                       <span
-                        className={`text-2xl leading-none text-blue-600 transition-transform duration-200 ${
+                        className={`text-xl leading-none text-blue-600 transition-transform duration-200 sm:text-2xl ${
                           openIndex === index ? 'rotate-45' : ''
                         }`}
                         aria-hidden="true"
@@ -87,7 +87,7 @@ const History: React.FC = () => {
                       }`}
                     >
                       <div className="overflow-hidden">
-                        <div className="px-6 pb-6 pt-1 text-gray-600">
+                        <div className="px-4 pb-4 pt-1 text-sm text-gray-600 sm:px-6 sm:pb-6 sm:text-base">
                         <p className="leading-relaxed">{item.description}</p>
                         </div>
                       </div>

@@ -52,39 +52,39 @@ const CURRENT_REGION_DATA_URL = `${import.meta.env.BASE_URL}data/current-regions
 const getResponsiveGlobeLayout = (width: number, height: number) => {
   if (width <= 340) {
     return {
-      globeWidth: Math.round(width * 0.78),
+      globeWidth: width,
       globeHeight: height,
-      offsetX: -18,
-      offsetY: -14,
+      offsetX: -10,
+      offsetY: -10,
       view: { lat: 37.2, lng: 123.8, altitude: 2.45 }
     };
   }
 
   if (width <= 380) {
     return {
-      globeWidth: Math.round(width * 0.82),
+      globeWidth: width,
       globeHeight: height,
-      offsetX: -14,
-      offsetY: -12,
+      offsetX: -8,
+      offsetY: -8,
       view: { lat: 36.9, lng: 124.8, altitude: 2.32 }
     };
   }
 
   if (width <= 430) {
     return {
-      globeWidth: Math.round(width * 0.86),
+      globeWidth: width,
       globeHeight: height,
-      offsetX: -10,
-      offsetY: -8,
+      offsetX: -6,
+      offsetY: -6,
       view: { lat: 36.6, lng: 125.8, altitude: 2.18 }
     };
   }
 
   if (width <= 520) {
     return {
-      globeWidth: Math.round(width * 0.9),
+      globeWidth: width,
       globeHeight: height,
-      offsetX: -6,
+      offsetX: -4,
       offsetY: -4,
       view: { lat: 36.4, lng: 126.8, altitude: 2.02 }
     };
@@ -131,6 +131,7 @@ const CurrentRegionGlobe: React.FC<CurrentRegionGlobeProps> = ({ pointsOverride,
   const [hasError, setHasError] = useState(false);
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
   const points = pointsOverride ?? fetchedPoints;
+  const isMobileViewport = containerSize.width > 0 && containerSize.width < 640;
 
   useEffect(() => {
     let isMounted = true;
@@ -264,17 +265,20 @@ const CurrentRegionGlobe: React.FC<CurrentRegionGlobeProps> = ({ pointsOverride,
 
   const pointData = useMemo(
     () => {
+      const mobileDotScale = isMobileViewport ? 0.62 : 1;
+      const mobileRingScale = isMobileViewport ? 0.68 : 1;
+
       if (!collapseToSeoul) {
         return points.map((item) => ({
           ...item,
           dotSize:
             item.count <= 2
-              ? Math.max(0.54, Math.sqrt(item.count) * 0.228)
-              : Math.max(0.18, Math.sqrt(item.count) * 0.076),
+              ? Math.max(0.54 * mobileDotScale, Math.sqrt(item.count) * 0.228 * mobileDotScale)
+              : Math.max(0.18 * mobileDotScale, Math.sqrt(item.count) * 0.076 * mobileDotScale),
           ringSize:
             item.count <= 2
-              ? Math.max(1.74, Math.sqrt(item.count) * 0.84)
-              : Math.max(1.16, Math.sqrt(item.count) * 0.56),
+              ? Math.max(1.74 * mobileRingScale, Math.sqrt(item.count) * 0.84 * mobileRingScale)
+              : Math.max(1.16 * mobileRingScale, Math.sqrt(item.count) * 0.56 * mobileRingScale),
           color: item.region === '서울' ? '#7dd3fc' : item.count >= 5 ? '#a78bfa' : '#f9a8d4'
         }));
       }
@@ -287,13 +291,13 @@ const CurrentRegionGlobe: React.FC<CurrentRegionGlobeProps> = ({ pointsOverride,
           lat: SEOUL_COORDINATES.lat,
           lng: SEOUL_COORDINATES.lng,
           count: totalCount,
-          dotSize: Math.max(0.22, Math.sqrt(totalCount) * 0.072),
-          ringSize: Math.max(1.44, Math.sqrt(totalCount) * 0.6),
+          dotSize: Math.max(0.22 * mobileDotScale, Math.sqrt(totalCount) * 0.072 * mobileDotScale),
+          ringSize: Math.max(1.44 * mobileRingScale, Math.sqrt(totalCount) * 0.6 * mobileRingScale),
           color: '#7dd3fc'
         }
       ];
     },
-    [collapseToSeoul, points]
+    [collapseToSeoul, isMobileViewport, points]
   );
 
   const globeLayout = useMemo(

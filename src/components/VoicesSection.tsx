@@ -23,8 +23,8 @@ const VoicesSection: React.FC = () => {
           워크샵 소개
         </h2>
         <p className="mx-auto mb-14 max-w-3xl text-center text-lg leading-relaxed text-gray-600 md:text-xl">
-          Reimagine 2035 워크샵은 학생들의 생각과 상상을 인터뷰와 대화로 모아,
-          앞으로의 KMUCS가 어떤 방향으로 나아가야 할지 함께 그려보는 프로그램입니다.
+          Reimagine 2035 워크샵은 <br className="block sm:hidden" />학생들의 생각과 상상을 인터뷰와 대화로 모아,
+          앞으로의 KMUCS가 어떤 방향으로 <br className="block sm:hidden" />나아가야 할지 함께 그려보는 프로그램입니다.
         </p>
         <div className="grid md:grid-cols-3 gap-12">
           {workshopHighlights.map((item, index) => (

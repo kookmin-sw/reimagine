@@ -18,7 +18,7 @@ const Survey: React.FC = () => {
           <section className="overflow-hidden rounded-[2rem] bg-[linear-gradient(135deg,#0f172a_0%,#1d4ed8_58%,#60a5fa_100%)] px-6 py-12 text-white shadow-xl sm:px-10">
             <p className="text-sm font-semibold uppercase tracking-[0.28em] text-blue-100/90">Survey</p>
             <h1 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
-              Reimagine 2035 설문 조사
+              Reimagine 2035 <br className="block md:hidden" />설문 조사
             </h1>
           </section>
 
@@ -28,7 +28,7 @@ const Survey: React.FC = () => {
               <h2 className="mt-4 text-2xl font-bold text-slate-900">설문 문항</h2>
 
               <div className="mt-8 space-y-6">
-                <div className="rounded-2xl bg-slate-50 p-6">
+                <div className="sm:rounded-2xl sm:bg-slate-50 sm:p-6">
                   <p className="text-sm font-semibold text-blue-700">첫 번째 설문</p>
                   <p className="mt-3 text-base leading-7 text-slate-700">
                     2035년! 지금부터 약 10년 후의 당신 또는 KMUCS 졸업생을 상상해 보세요. 사회는 어떻게 바뀌었을까요? 어떤
@@ -37,7 +37,7 @@ const Survey: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-slate-50 p-6">
+                <div className="sm:rounded-2xl sm:bg-slate-50 sm:p-6">
                   <p className="text-sm font-semibold text-blue-700">두 번째 설문</p>
                   <p className="mt-3 text-base leading-7 text-slate-700">
                     첫 번째 설문에서 상상한 2035년의 당신 또는 KMUCS 졸업생이 있게 된 것은 지금부터 10년 동안에 있게 될
@@ -46,7 +46,7 @@ const Survey: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-slate-50 p-6">
+                <div className="sm:rounded-2xl sm:bg-slate-50 sm:p-6">
                   <p className="text-sm font-semibold text-blue-700">세 번째 설문</p>
                   <p className="mt-3 text-base leading-7 text-slate-700">
                      2035년, 당신의 상상 속의 도시는?   
