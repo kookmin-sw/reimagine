@@ -47,6 +47,7 @@ type CurrentRegionGlobeProps = {
 const COUNTRIES_GEOJSON_URL =
   'https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson';
 const SEOUL_COORDINATES = { lat: 37.5665, lng: 126.978 };
+const CURRENT_REGION_DATA_URL = `${import.meta.env.BASE_URL}data/current-regions.json`;
 
 const getResponsiveGlobeLayout = (width: number, height: number) => {
   if (width <= 340) {
@@ -183,7 +184,7 @@ const CurrentRegionGlobe: React.FC<CurrentRegionGlobeProps> = ({ pointsOverride,
 
     let isMounted = true;
 
-    fetch('/data/current-regions.json')
+    fetch(CURRENT_REGION_DATA_URL)
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch current region data');
