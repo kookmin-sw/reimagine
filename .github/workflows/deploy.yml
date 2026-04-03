@@ -34,6 +34,14 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Verify Pages artifact
+        run: |
+          test -f dist/index.html
+          test -f dist/404.html
+          test -f dist/logo.svg
+          test -f dist/share.png
+          test -f dist/robots.txt
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
