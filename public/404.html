@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KMUCS Reimagine 2035!</title>
+    <script>
+      (function () {
+        var basePath = '/reimagine2035/';
+        var pathname = window.location.pathname;
+        var normalizedPath = pathname.startsWith(basePath)
+          ? pathname.slice(basePath.length)
+          : pathname.replace(/^\//, '');
+        var redirectTarget = normalizedPath + window.location.search + window.location.hash;
+
+        sessionStorage.setItem('spa-redirect-path', redirectTarget);
+        window.location.replace(basePath);
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
