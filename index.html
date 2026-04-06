@@ -1,10 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="/symbol_color.jpg" />
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KMUCS Reimagine 2035 !</title>
+    <meta name="description" content="KMUCS의 미래 비전을 함께 상상하고 만들어가는 프로젝트입니다." />
+    <meta name="keywords" content="KMUCS, Reimagine 2035, 국민대학교, 소프트웨어융합대학, 미래 비전, 워크샵, 설문조사" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="KMUCS Reimagine 2035!" />
+    <meta property="og:description" content="KMUCS의 미래 비전을 함께 상상하고 만들어가는 프로젝트입니다." />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:image" content="%BASE_URL%share.png" />
+    <meta property="og:site_name" content="KMUCS Reimagine 2035!" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="KMUCS Reimagine 2035!" />
+    <meta name="twitter:description" content="KMUCS의 미래 비전을 함께 상상하고 만들어가는 프로젝트입니다." />
+    <meta name="twitter:image" content="%BASE_URL%share.png" />
+    <title>KMUCS Reimagine 2035!</title>
+    <script>
+      (function () {
+        var basePath = '%BASE_URL%';
+        var redirectPath = sessionStorage.getItem('spa-redirect-path');
+        if (!redirectPath) return;
+
+        sessionStorage.removeItem('spa-redirect-path');
+        window.history.replaceState(null, '', basePath + redirectPath);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
