@@ -109,7 +109,7 @@ const History: React.FC = () => {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href="https://alumni.cs.kookmin.ac.kr/"
+                href="https://software.kookmin.ac.kr/software/index.do"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white/70 px-6 py-3 text-sm font-medium text-slate-600 transition-all duration-200 hover:border-slate-300 hover:bg-white hover:text-slate-800"
@@ -117,7 +117,7 @@ const History: React.FC = () => {
                 국민대학교 소프트웨어융합대학 바로가기
               </a>
               <a
-                href="https://software.kookmin.ac.kr/software/index.do"
+                href="https://alumni.cs.kookmin.ac.kr/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white/70 px-6 py-3 text-sm font-medium text-slate-600 transition-all duration-200 hover:border-slate-300 hover:bg-white hover:text-slate-800"
